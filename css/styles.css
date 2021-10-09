@@ -1,7 +1,10 @@
+  /* SITE-HEADER */
 .site-header {
   background-color: #fff;
 }
 
+
+/* SITE-NAV */
 .sitenav-list {
   list-style: none;
 }
@@ -16,6 +19,7 @@
   color: #000;
 }
 
+  /* MAIN-LINK */
 .main-link{
   font-size: 13px;
   line-height: 15px;
@@ -26,7 +30,7 @@
 }
 
 
-
+/*HERO */
 .site-hero {
   background-color: #252420;
   color: #fff;
@@ -61,7 +65,7 @@
 }
 
 
-
+  /* FEATURES */
 .features-heading {
   width: 440px;
   font-size: 72px;
@@ -69,6 +73,7 @@
   letter-spacing: 0.5px;
 }
 
+  /* FEATURE */
 .feature {
   width: 340px;
 }
@@ -92,11 +97,12 @@
 }
 
 
-
+  /* PROMO */
 .promo {
   background-color: #252420;
   color: #fff;
 }
+
 .promo-content {
   width: 440px;
 }
@@ -123,7 +129,7 @@
 }
 
 
-
+  /* SITE-FOOTER */
 .site-footer {
   background-color: #f8f8f8;
 }
