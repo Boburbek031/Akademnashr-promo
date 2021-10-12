@@ -6,6 +6,11 @@
      font-family: "Roboto", "Arial", sans-serif;
    }
 
+   *:focus {
+     outline: 2px dotted #FF7500;
+     outline-offset: 3px;
+   }
+
    /* SITE-HEADER */
    .site-header {
      display: flex;
@@ -229,7 +234,7 @@
     color: #FF7500;
   }
 
-  .site-footer-links a:focus {
+  .site-footer-links a:active {
     opacity: 0.6;
   }
 
