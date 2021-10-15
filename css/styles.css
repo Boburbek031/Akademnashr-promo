@@ -39,6 +39,10 @@
     align-items: center;
   }
 
+  .logo-link img {  /* logo-linkni ichidagi rasmni displayini block qilib qo'yamiz. pasidagi bosh joyni o'chirish uchun. */
+    display: block;
+  }
+
 
   /* SITE-NAV */
   .sitenav-list {
@@ -278,6 +282,7 @@
   }
 
   .site-footer-socials a {
+    display: block;  /* Iconkalarni pastidagi bo'shliqni olib tashladik. */
     color: #252420;
     transition: color 0.4s ease,
       opacity 0.4s ease;
@@ -289,6 +294,10 @@
 
   .site-footer-socials a:active {
     opacity: 0.6;
+  }
+
+  .site-footer-socials svg {   /* Iconkalarni pastidagi bo'shliqni olib tashladik. */
+    display: block;
   }
 
   .site-footer ul {
