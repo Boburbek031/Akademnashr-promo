@@ -1,352 +1,401 @@
-   /* Body */
-   body {
-     font-size: 16px;
-     line-height: 1.5;
-     letter-spacing: 0.5px;
-     font-family: "Roboto", "Arial", sans-serif;
-   }
+ *{
+   box-sizing: border-box; /* Eng birinchi border-box qivolamiz, yoyilib ketmasligi uchun. */
+ }
 
-   *:focus {
-     outline: 2.5px dotted #FF7500;
-     outline-offset: 3px;
-   }
+    /* Body */
+ body {
+  /* Body dan padding va marginni olib tashlaymiz */
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  font-family: "Roboto", "Arial", sans-serif;
+ }
+
+ *:focus {
+   outline: 2.5px dotted #FF7500;
+   outline-offset: 3px;
+ }
+
+   /* CONTAINER */
+.container {
+  width: 100%;
+  max-width: 1140px; /* tomondan 30 px da padding bersak 60 qo'shiladi */
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+ }
+
+ .site-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
 
    /* SITE-HEADER */
-   .site-header {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     padding-top: 16px;
-     padding-bottom: 16px;
-     border-top: 5px solid #FF7500;
-     background-color: #fff;
-  }
+.site-header {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-top: 5px solid #FF7500;
+  background-color: #fff;
+ }
 
-  .logo-link {
-    transition: opacity 0.4s ease;
-  }
+.logo-link {
+ transition: opacity 0.4s ease;
+ }
+.logo-link:hover {
+  opacity: 0.8;
+ }
 
-  .logo-link:hover {
-    opacity: 0.8;
-  }
+.logo-link:active {
+  opacity: 0.6;
+ }
 
-  .logo-link:active {
-    opacity: 0.6;
-  }
+.site-header-actions {
+  display: flex;
+  align-items: center;
+ }
 
-  .site-header-actions {
-    display: flex;
-    align-items: center;
-  }
-
-  .logo-link img {  /* logo-linkni ichidagi rasmni displayini block qilib qo'yamiz. pasidagi bosh joyni o'chirish uchun. */
-    display: block;
-  }
+.logo-link img {
+  /* logo-linkni ichidagi rasmni displayini block qilib qo'yamiz. pasidagi bosh joynio'chirish uchun. */
+  display: block;
+ }
 
 
-  /* SITE-NAV */
-  .sitenav-list {
-    display: flex;
-    padding: 0;
-    margin: 0; /* Birinchi margin berishda, hamma margin ni 0 qivolamiz, browserdagi. */
-    margin-right: 32px; /* ul bilan buttonni o'rasini o'chmoqchi bo'lsak marginni ul ga beramiz */
-    list-style: none;
-  }
+   /* SITE-NAV */
+.sitenav-list {
+  display: flex;
+  padding: 0;
+  margin: 0; /* Birinchi margin berishda, hamma margin ni 0 qivolamiz, browserdagi. */
+  margin-right: 32px; /* ul bilan buttonni o'rasini o'chmoqchi bo'lsak marginni ul ga beramiz */
+  list-style: none;
+}
 
-  .sitenav-item {
-    margin-right: 32px;
-  }
+.sitenav-item {
+  margin-right: 32px;
+ }
 
-  .sitenav-item:last-child { /* li oxirigi elementida margin ni olib tashlashda, biz last-child preusdo classdan foydalanamiz. Shunda: ul ning oxirigi li dan Marginni olib tashlaymiz o'ng tomondagi. */
-    margin-right: 0;
-  }
+.sitenav-item:last-child { /* li oxirigi elementida margin ni olib tashlashda, biz last-child preusdoclassdan foydalanamiz. Shunda: ul ning oxirigi li dan Marginni olib tashlaymiz o'ng tomondagi. */
+  margin-right: 0;
+ }
 
-  .sitenav-link {
-    font-size: 13px;
-    line-height: 15px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #000;
-    transition: color 0.4s ease,
-     opacity 0.4s ease;
-  }
+.sitenav-link {
+  font-size: 13px;
+  line-height: 15px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+  transition: color 0.4s ease,
+   opacity 0.4s ease;
+ }
 
-  .sitenav-link:hover {
-    color: #FF7500;
-  }
+.sitenav-link:hover {
+  color: #FF7500;
+ }
 
-  .sitenav-link:active {
-    opacity: 0.6;
-  }
+.sitenav-link:active {
+  opacity: 0.6;
+ }
 
-  /* MAIN-LINK */
-  .main-link{
-    /* Bu elementimiz link bo'gani uchun, u padding ni to'g'ri tushunmaydi, shunga biz uni
-    display: inline-block; qilib straxovka qilishimiz kerak. */
-    display: inline-block;
-   /*padding-top: 12px;
-     padding-right: 24px;
-     padding-bottom: 12px;
-     padding-left: 24px; */
-     /* ikki hil padding bo'sa tepa/past / ikki yon pastagi xolatda bersak bo'ladi. */
-    padding: 12px 24px;
-    border-radius: 4px;
-    font-size: 13px;
-    line-height: 15px;
-    font-weight: bold;
-    background-color: #FF7500;
-    color: #fff;
-    text-decoration: none;
-    transition: opacity 0.4s ease;
-  }
 
-  .main-link:hover {
-    opacity: 0.8;
-  }
+    /* MAIN-LINK */
+.main-link{
+  /* Bu elementimiz link bo'gani uchun, u padding ni to'g'ri tushunmaydi, shunga biz uni
+  display: inline-block; qilib straxovka qilishimiz kerak. */
+  display: inline-block;
+ /*padding-top: 12px;
+   padding-right: 24px;
+   padding-bottom: 12px;
+   padding-left: 24px; */
+   /* ikki hil padding bo'sa tepa/past / ikki yon pastagi xolatda bersak bo'ladi. */
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 15px;
+  font-weight: bold;
+  background-color: #FF7500;
+  color: #fff;
+  text-decoration: none;
+  transition: opacity 0.4s ease;
+ }
 
-  .main-link:active {
-    opacity: 0.6;
-  }
+.main-link:hover {
+  opacity: 0.8;
+ }
+
+.main-link:active {
+  opacity: 0.6;
+ }
 
 
   /*HERO */
   .site-hero {
-    display: flex;
     padding-top: 80px;
     padding-bottom: 80px;
-    align-items: center;
-    justify-content: space-between;
     background-color: #252420;
     color: #fff;
   }
 
-  .hero-content {
-    width: 390px;
-  }
-
-  .orange-line {
-    width: 80px;
-    height: 3px;
-    border: none;
-    margin: 0;
-    margin-bottom: 40px;
-    background-color: #FF7500;
-  }
-
-  .hero-heading {
-    font-size: 40px;
-    line-height: 1.2;;
-    margin-right: 0; /* Hardoim default margin ni 0 qilvolamiz. */
-    margin-bottom: 24px;
-    font-family: "Roboto Condensed", "Roboto", "Arial", sans-serif;
-  }
-
-  .hero-paragraph {
-    margin-top: 0;
-    margin-bottom: 32px;
-  }
-
-  .hero-img {
-    width: 510px;
-    height: 510px;
-    /* border-radius bermoqchi bo'lgan rasmlarni JPG da olamiz, va radiusi bor joyini cssda to'g'irlavoramiz kamro joy olishi uchun. */
-    border-radius: 8px;
-    object-fit: cover;
-  }
-
-
-  /* FEATURES */
-  .features {
-    padding-top: 210px;
-    padding-bottom: 210px;
-  }
-
-  .feature-heading {
-    width: 440px;
-    font-size: 72px;
-    line-height: 1.2;
-    margin-top: 0;
-    margin-bottom: 72px;
-    font-family: "Roboto Condensed", "Roboto", "Arial", sans-serif;
-  }
-
-  .features-list {
+  .hero-container {
     display: flex;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-
-  /* FEATURE */
-  .feature {
-    width: 340px;
-    margin-right: 40px;
-  }
-
-  .feature:last-child {
-    margin-right: 0;
-  }
-
-  .feature-icon-wrapper {
-    display: flex; /* Bu uchalasi ikonkalarni o'rtada turishi uchun. */
-    justify-content: center;
     align-items: center;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-color: rgba(255, 177, 0, 0.2);
+    justify-content: space-between;
   }
 
-  .feature-title {
-    font-size: 24px;
-    line-height: 1.2;
-    font-family: "Roboto Condensed", "Arial", sans-serif;
-  }
+.hero-content {
+  width: 390px;
+ }
+
+.orange-line {
+  width: 80px;
+  height: 3px;
+  border: none;
+  margin: 0;
+  margin-bottom: 40px;
+  background-color: #FF7500;
+ }
+
+.hero-heading {
+  font-size: 40px;
+  line-height: 1.2;;
+  margin-right: 0; /* Hardoim default margin ni 0 qilvolamiz. */
+  margin-bottom: 24px;
+  font-family: "Roboto Condensed", "Roboto", "Arial", sans-serif;
+ }
+
+.hero-paragraph {
+  margin-top: 0;
+    margin-bottom: 32px;
+ }
+
+.hero-img {
+  width: 510px;
+  height: 510px;
+  /* border-radius bermoqchi bo'lgan rasmlarni JPG da olamiz, va radiusi bor joyini cssda to'g'irlavoramiz kamro joy olishi uchun. */
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 24px 24px 0 0 rgba(255, 117, 0, 0.6);
+ }
+
+
+   /* FEATURES */
+.features {
+  padding-top: 210px;
+  padding-bottom: 210px;
+ }
+
+.feature-heading {
+  width: 440px;
+  font-size: 72px;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 72px;
+  font-family: "Roboto Condensed", "Roboto", "Arial", sans-serif;
+ }
+
+.features-list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+ }
+
+
+   /* FEATURE */
+.feature {
+  width: 340px;
+  margin-right: 40px;
+ }
+
+.feature:last-child {
+  margin-right: 0;
+ }
+
+.feature-icon-wrapper {
+  display: flex; /* Bu uchalasi ikonkalarni o'rtada turishi uchun. */
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 32px;
+  border-radius: 50%;
+  background-color: rgba(255, 177, 0, 0.2);
+ }
+
+.feature-title {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 24px;
+  line-height: 1.2;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+ }
+
+ .feature-info {
+   margin: 0;
+ }
+
 
   /* PROMO */
-  .promo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 12px;
-    background-color: #252420;
-    color: #fff;
-  }
+.promo {
+  padding-top: 12px;
+  padding-bottom: 160px;
+}
 
-  .promo-content {
-    width: 440px;
-  }
+.promo-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 64px;
+  border-radius: 12px;
+  background-color: #252420;
+  color: #fff;
+ }
 
-  .promo-title {
-    margin-top: 0;
-    margin-bottom: 24px;
-    font-size: 40px;
-    line-height: 48px;
-    font-family: "Roboto Condensed", "Roboto", "Arial", sans-serif;
-  }
+.promo-content {
+  width: 440px;
+ }
 
-  .promo-info-wrapper {
-    margin-bottom: 24px;
-  }
+.promo-title {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 40px;
+  line-height: 48px;
+  font-family: "Roboto Condensed", "Roboto", "Arial", sans-serif;
+ }
 
-  .promo-text {
-    margin-top: 0;
-    margin-bottom: 12px;
-  }
+.promo-info-wrapper {
+  margin-bottom: 24px;
+ }
 
-  .promo-text:last-child {
-    margin-bottom: 0;
-  }
+.promo-text {
+  margin-top: 0;
+  margin-bottom: 12px;
+ }
 
-  .promo-highlight {
-    color: #FF7500;
-  }
+.promo-text:last-child {
+  margin-bottom: 0;
+ }
 
-  .promo-img {
-    width: 440px;
-    height: 440px;
-    border-radius: 12px;
-    object-fit: cover;
-  }
+.promo-highlight {
+  color: #FF7500;
+ }
+
+.promo-img {
+  width: 440px;
+  height: 440px;
+  border-radius: 12px;
+  object-fit: cover;
+ }
 
 
-  /* SITE-FOOTER */
-  .site-footer {
-    padding-top: 56px;
-    padding-bottom: 56px;
-    background-color: #f8f8f8;
-  }
+    /* SITE-FOOTER */
+.site-footer {
+  padding-top: 56px;
+  padding-bottom: 56px;
+  background-color: #f8f8f8;
+ }
 
-  .site-footer-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+.site-footer-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ }
 
-  .site-footer-socials {
-    display: flex;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-  }
+.site-footer-socials {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+ }
 
-  /* Img block */
-  .site-footer-socials li {
-    margin-right: 16px;
-  }
+/* Img block */
+.site-footer-socials li {
+  margin-right: 16px;
+ }
 
-  .site-footer-socials li:last-child {
-    margin-right: 0;
-  }
+.site-footer-socials li:last-child {
+  margin-right: 0;
+ }
 
-  .site-footer-socials a {
-    display: block;  /* Iconkalarni pastidagi bo'shliqni olib tashladik. */
-    color: #252420;
-    transition: color 0.4s ease,
-      opacity 0.4s ease;
-  }
+.site-footer-socials a {
+  display: block;  /* Iconkalarni pastidagi bo'shliqni olib tashladik. */
+  color: #252420;
+  transition: color 0.4s ease,
+    opacity 0.4s ease;
+ }
 
-  .site-footer-socials a:hover {   /* Uni ichidagi linklarimiz hover bo'ganda deyish uchun a ni qo'yishimiz kerak. */
-    color: #FF7500;
-  }
+.site-footer-socials a:hover {   /* Uni ichidagi linklarimiz hover bo'ganda deyish uchun a ni qo'yishimizkerak. */
+  color: #FF7500;
+ }
 
-  .site-footer-socials a:active {
-    opacity: 0.6;
-  }
+.site-footer-socials a:active {
+  opacity: 0.6;
+ }
 
-  .site-footer-socials svg {   /* Iconkalarni pastidagi bo'shliqni olib tashladik. */
-    display: block;
-  }
+.site-footer-socials svg {   /* Iconkalarni pastidagi bo'shliqni olib tashladik. */
+  display: block;
+ }
 
-  .site-footer ul {
-    list-style: none;
-    padding: 0;
-  }
+.site-footer ul {
+  list-style: none;
+  padding: 0;
+ }
 
-  .site-footer-divider {
-    height: 2px;
-    border: 0;
-    margin: 0;
-    margin-top: 40px;
-    margin-bottom: 64px;
-    background-color: rgba(37, 36, 32, 0.5);
-  }
+.site-footer-divider {
+  height: 2px;
+  border: 0;
+  margin: 0;
+  margin-top: 40px;
+  margin-bottom: 64px;
+  background-color: rgba(37, 36, 32, 0.5);
+ }
 
-  .site-footer-bottom {
-    display: flex;
-  }
+.site-footer-bottom {
+  display: flex;
+ }
 
-  .site-footer-links {
-    width: 224px;
-    padding: 0;
-    margin: 0;
-    margin-right: 68px;
-    list-style: none;
-    line-height: 19px;
-  }
+.site-footer-links {
+  width: 224px;
+  padding: 0;
+  margin: 0;
+  margin-right: 68px;
+  list-style: none;
+  line-height: 19px;
+ }
 
-  .site-footer-links:last-child {
-    margin-right: 0;
-  }
+.site-footer-links:last-child {
+  margin-right: 0;
+ }
 
-  .site-footer-links  a {
-    text-decoration: none;
-    color: #252420;
-    transition: color 0.4s ease,
-     opacity 0.4s ease;
-  }
+ .site-footer-links li {
+  margin-bottom: 16px;
+}
 
-  .site-footer-links a:hover {
-    color: #FF7500;
-  }
+.site-footer-links li:last-child {
+  margin-bottom: 0;
+}
 
-  .site-footer-links a:active {
-    opacity: 0.6;
-  }
+.site-footer-links  a {
+  text-decoration: none;
+  color: #252420;
+  transition: color 0.4s ease,
+   opacity 0.4s ease;
+ }
 
+.site-footer-links a:hover {
+  color: #FF7500;
+ }
+
+.site-footer-links a:active {
+  opacity: 0.6;
+ }
 
 
   /* Roboto 400 500 700
   Roboto Condensed 700  shu shriftlar kerak ==> google fontsdan olamiz */
+
+  /* Esimizda qolish kerak Rasm va boshqa inline elementlat tagida bo'shliq qoladi. Agar ularni dispalyi block bo'lmasa yoki block simon narsa bo'lmasa, qo'shimcha biror bir display berilishi mumkin. */
